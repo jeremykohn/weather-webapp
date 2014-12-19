@@ -1,0 +1,59 @@
+body {
+	margin: 0px;
+	text-align: center;
+}
+
+
+
+div {
+	margin: auto;
+}
+
+
+/* Hide this with JS if it's turned on. */
+
+#error-need-javascript {
+	height: 50px;
+	visibility: visible;
+	background-color: orange;
+}
+
+
+
+/* Unhide this with JS if it's turned on. */
+
+#application-container {
+	background-color: #EEE;
+	visibility: hidden;
+}
+
+#data-display {
+	width: 750px;
+	height: 500px;
+}
+
+#forecast-results {
+	background-color: #DDD
+}
+
+	
+#forecast-label {	
+	
+}
+
+.single-day {
+	display: inline-block;
+	padding: 25px;
+}
+	
+	
+	
+	
+#credits {
+	font-size: 20px;
+	background-color: #EEE;
+}
+
+#wul-logo {
+	height: 50px;
+}

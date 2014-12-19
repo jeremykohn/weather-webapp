@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<!-- Make non-HTML5 version? -->
+<!-- Zip code might have to be validated differently, for example -->
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Three-day forecast from wunderground.com</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="bootstrap.css"> -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="weather-data.js"></script>
+
+
+</head>
+
+
+
+<body>
+	
+
+
+<div id="error-need-javascript">
+	<h3 id="javascript-error-message">If you are seeing this message, either there was an error loading the page or JavaScript is turned off. Try turning JavaScript on again.<h3>
+</div>
+
+
+<div id="application-container">
+	
+	<div id="zip-code-input-form">
+		<h1>Three-day forecast</h1>
+		<h3>Enter zip code</h3>
+		<form id="enter-zipcode">
+			<input id="zipcode-input" type="text">
+			<input id="submit-button" type="button" value="Submit">
+		</form>
+	</div>
+
+
+<div id="results">
+
+<div id="forecast-label">
+	Three-day forecast for zip code <span id="zip-code-display">... (Enter zip code and click "Submit")</span>
+</div>
+
+<div class="data-display">
+	<div class="single-day" id="first-day">
+		<div class="date">
+			<div class="day-of-week"></div>
+		</div>
+		<div class="high-and-low">
+			<div class="high-temp"></div>
+			<div class="low-temp"></div>
+		</div>
+		<div class="overall-conditions">
+			<div class="icon"></div>
+			<div class="conditions"></div>
+		</div>
+	</div>
+	<div class="single-day" id="second-day">
+		<div class="date">
+			<div class="day-of-week"></div>
+			<div class="calendar-date"></div>
+		</div>
+		<div class="high-and-low">
+			<div class="high-temp"></div>
+			<div class="low-temp"></div>
+		</div>
+		<div class="overall-conditions">
+			<div class="icon"></div>
+			<div class="conditions"></div>
+		</div>
+	</div>	
+	<div class="single-day" id="third-day">
+		<div class="date">
+			<div class="day-of-week"></div>
+			<div class="calendar-date"></div>
+		</div>
+		<div class="high-and-low">
+			<div class="high-temp"></div>
+			<div class="low-temp"></div>
+		</div>
+		<div class="overall-conditions">
+			<div class="icon"></div>
+			<div class="conditions"></div>
+		</div>
+
+	</div>
+
+</div>
+
+</div>
+
+<div id="credits">
+	Weather data provided by
+	<div id="wul-logo">
+		<a href="http://www.wunderground.com"><img id="wul-logo" src="http://icons.wxug.com/logos/PNG/wundergroundLogo_4c_horz.png"></a>
+	</div>
+</div>
+
+
+
+<!-- Put main JS here? Temporarily. --> 
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
