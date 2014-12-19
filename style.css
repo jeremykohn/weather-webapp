@@ -3,57 +3,86 @@ body {
 	text-align: center;
 }
 
-
-
 div {
 	margin: auto;
+	position: static;
+	font-family: "courier";	
 }
 
-
-/* Hide this with JS if it's turned on. */
-
+/* If JS is turned on, hide this... */
 #error-need-javascript {
 	height: 50px;
 	visibility: visible;
 	background-color: orange;
 }
 
-
-
-/* Unhide this with JS if it's turned on. */
-
+/* ...and show this. */
 #application-container {
-	background-color: #EEE;
+	width: 750px;
+	height: 500px;	
 	visibility: hidden;
 }
 
-#data-display {
-	width: 750px;
-	height: 500px;
+#forecast-label {
+	margin: 10px;
 }
 
-#forecast-results {
-	background-color: #DDD
-}
-
-	
-#forecast-label {	
-	
+#spinning-circle {
+	visibility: hidden;
 }
 
 .single-day {
 	display: inline-block;
 	padding: 25px;
 }
-	
-	
-	
-	
-#credits {
-	font-size: 20px;
-	background-color: #EEE;
-}
 
 #wul-logo {
-	height: 50px;
+	height: 30px;
+}
+
+
+/* 
+	CSS spinning circle animation courtesy of 
+  	http://www.andreaverlicchi.eu/css-3-only-spinning-loading-animation/
+*/
+
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* Loading animation container */
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 28px;
+	height: 28px;
+	margin: -14px 0 0 -14px;
+}
+
+/* Spinning circle (inner circle) */
+.loading .maskedCircle {
+	width: 20px;
+	height: 20px;
+	border-radius: 12px;
+	border: 3px solid black;
+}
+
+/* Spinning circle mask */
+.loading .mask {
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+}
+
+/* Spinner */
+.loading .spinner {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 26px;
+	height: 26px;
+	animation: spin 1s infinite linear;
 }
